@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>untagged on Kverb.com</title>
+    <link>/tags/untagged/</link>
+    <description>Recent content in untagged on Kverb.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 11 Jun 2022 12:45:58 -0400</lastBuildDate><atom:link href="/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>server notes</title>
+      <link>/posts/server/</link>
+      <pubDate>Sat, 11 Jun 2022 12:45:58 -0400</pubDate>
+      
+      <guid>/posts/server/</guid>
+      <description>Very loosely organized notes of server builds.</description>
+    </item>
+    
+  </channel>
+</rss>
