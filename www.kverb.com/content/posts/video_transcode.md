@@ -85,23 +85,23 @@ example `ffmpeg` command that is generated:
 
 ```fish
 ffmpeg -loglevel error -stats -vaapi_device /dev/dri/renderD128 \
--i /media/movies/Honeyland\ \(2019\)/Honeyland\ \(2019\)\ Remux-1080p.mkv \
--map 0:0 -filter:v yadif,format\=nv12,hwupload -c:v hevc_vaapi -b:v 9000k \
--color_primaries:v bt709 -color_trc:v bt709 -colorspace:v bt709 \
--metadata:s:v title\= -disposition:v default -map 0:1 -c:​a:0 ac3 \
--metadata:s:​a:0 title\= -disposition:​a:0 default -map 0:2 -c:​a:1 aac \
--metadata:s:​a:1 title\= -disposition:​a:1 0 -sn \
--metadata:g title\= -default_mode passthrough \
-Honeyland\ \(2019\)\ Remux-1080p.mkv
+  -i /media/movies/Honeyland\ \(2019\)/Honeyland\ \(2019\)\ Remux-1080p.mkv \
+  -map 0:0 -filter:v yadif,format\=nv12,hwupload -c:v hevc_vaapi -b:v 9000k \
+  -color_primaries:v bt709 -color_trc:v bt709 -colorspace:v bt709 \
+  -metadata:s:v title\= -disposition:v default -map 0:1 -c:​a:0 ac3 \
+  -metadata:s:​a:0 title\= -disposition:​a:0 default -map 0:2 -c:​a:1 aac \
+  -metadata:s:​a:1 title\= -disposition:​a:1 0 -sn \
+  -metadata:g title\= -default_mode passthrough \
+  Honeyland\ \(2019\)\ Remux-1080p.mkv
 ```
 
 general ffmpeg param structure:
 
 ```fish
 ffmpeg -i <input file> \
-		-stats \
-		-<extra params> \
-		<output_file_name>
+	-stats \
+	-<extra params> \
+	<output_file_name>
 ```
 
 (likely rare), but remux + transcode BR disk .iso rip:
@@ -112,7 +112,7 @@ essentially, the process is 1) mount the iso, find the correct m2ts file, combin
 Here’s an example of processing Apollo 11 blu-ray full disk:
 
 ```fish
-ffmpeg -i br/BDMV/STREAM/00006.m2ts -stats -map 0:0 -pix_fmt yuv420p10le -c:v libx265 -x265-params profile=main10:crf=20 -tag:v hvc1 -map 0:​a 'Apollo 11 (2019) Remux-2160p.mp4’
+  ffmpeg -i br/BDMV/STREAM/00006.m2ts -stats -map 0:0 -pix_fmt yuv420p10le -c:v libx265 -x265-params profile=main10:crf=20 -tag:v hvc1 -map 0:​a 'Apollo 11 (2019) Remux-2160p.mp4’
 ````
 
 using CRF for 4k main10:
