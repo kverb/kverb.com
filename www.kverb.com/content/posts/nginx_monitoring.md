@@ -27,8 +27,8 @@ Last Edited Time: March 10, 2022 6:28 PM
 
 - grafana, prometheus, and loki are already up and running correctly. These can/should be run on a separate container from nginx.
 - nginx is on a tailscale network that can access prometheus and Loki nodes
-    - in my setup, loki runs on the prometheus node
-    - this isn’t necessary; it just makes resolving the hosts secure and easy
+  - in my setup, loki runs on the prometheus node
+  - this isn’t necessary; it just makes resolving the hosts secure and easy
 - You’re not using something like docker containers. If you are, there are plenty of guides out there on how to do that.
 
 ## Set up the node exporter
@@ -38,7 +38,7 @@ There are probably distro packages/procedures for installing the nginx node expo
 ```bash
 # download the binary
 cd ~/downloads
-wget [https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.10.0/nginx-prometheus-exporter_0.10.0_linux_amd64.tar.gz](https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.10.0/nginx-prometheus-exporter_0.10.0_linux_amd64.tar.gz) -O ~/downloads/npe.tar.gz
+wget https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.10.0/nginx-prometheus-exporter_0.10.0_linux_amd64.tar.gz -O ~/downloads/npe.tar.gz
 # un-archive
 tar -xvf npe.tar.gz
 # copy the binary to somewhere sane. Here i've chosen /opt/
@@ -181,9 +181,9 @@ $ systemctl enable --now promtail
 $ systemctl enable --now nginx-prometheus-exporter
 ```
 
-You can verify nginx-prometheus-exporter is working by checking its http endpoint: [`http://nginx:9113/metrics`](http://nginx:9113/metrics)
+You can verify nginx-prometheus-exporter is working by checking its http endpoint: [http://nginx:9113/metrics](http://nginx:9113/metrics)
 
-And promtail: [`http://nginx:9080/targets`](http://nginx:9080/targets)
+And promtail: [http://nginx:9080/targets](http://nginx:9080/targets)
 
 ## Dashboards in grafana
 
