@@ -5,11 +5,8 @@ draft: false
 showTableOfContents: true
 category:
   - notes
+summary: "A primer on how to enable metrics collection and monitoring for Nginx using the grafana stack"
 ---
-
-
-Created: March 10, 2022 1:59 PM
-Last Edited Time: March 10, 2022 6:28 PM
 
 ## meta
 
