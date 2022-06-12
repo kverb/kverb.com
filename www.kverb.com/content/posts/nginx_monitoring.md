@@ -2,10 +2,7 @@
 title: "nginx metrics and log collection with grafana, prometheus, loki"
 date: 2022-06-11T12:45:58-04:00
 draft: false
-toc: false
-images:
-tags:
-  - hack
+showTableOfContents: true
 category:
   - notes
 ---
