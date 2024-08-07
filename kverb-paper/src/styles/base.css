@@ -124,4 +124,42 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+
+  /* admonition styles */
+  @layer components {
+    .admonition {
+      @apply my-1 flex overflow-hidden rounded-md bg-[#2E3440] text-[#E5E9F0];
+    }
+
+    .admonition-label {
+      @apply writing-vertical-rl px-0.5 py-0.5 text-center text-xs font-bold uppercase;
+    }
+
+    .admonition-content {
+      @apply flex-1 px-2 py-1.5 text-sm;
+    }
+
+    .admonition.note .admonition-label {
+      @apply bg-[#8FBCBB] text-[#E5E9F0];
+    }
+
+    .admonition.warning .admonition-label {
+      @apply bg-[#EBCB8B] text-[#2E3440];
+    }
+
+    .admonition.danger .admonition-label {
+      @apply bg-[#BF616A] text-[#2E3440];
+    }
+
+    .admonition.tip .admonition-label {
+      @apply bg-[#A3BE8C] text-[#2E3440];
+    }
+  }
+}
+
+@layer utilities {
+  .writing-vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 }

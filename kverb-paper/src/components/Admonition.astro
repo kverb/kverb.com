@@ -1,0 +1,15 @@
+---
+interface Props {
+  callout: string;
+  content: string;
+}
+
+const { callout = "note", content } = Astro.props;
+---
+
+<div class:list={["admonition", callout, { classname: true }]}>
+  <div class="admonition-label">{callout}</div>
+  <div class="admonition-content">
+    <p>{content}</p>
+  </div>
+</div>
