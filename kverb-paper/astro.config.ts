@@ -6,37 +6,29 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    react(),
-    sitemap(),
-  ],
+  integrations: [tailwind({
+    applyBaseStyles: false
+  }), react(), sitemap(), mdx()],
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of contents",
-        },
-      ],
-    ],
+    remarkPlugins: [remarkToc, [remarkCollapse, {
+      test: "Table of contents"
+    }]],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: {
         light: "min-light",
-        dark: "night-owl",
+        dark: "night-owl"
       },
-      wrap: true,
-    },
+      wrap: true
+    }
   },
   vite: {
-    optimizeDeps: {},
+    optimizeDeps: {}
   },
-  scopedStyleStrategy: "where",
+  scopedStyleStrategy: "where"
 });
