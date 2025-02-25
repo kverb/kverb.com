@@ -11,24 +11,35 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), react(), sitemap(), mdx()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    react(),
+    sitemap(),
+    mdx(),
+  ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, {
-      test: "Table of contents"
-    }]],
+    remarkPlugins: [
+      remarkToc,
+      [
+        remarkCollapse,
+        {
+          test: "Table of contents",
+        },
+      ],
+    ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: {
-        light: "min-light",
-        dark: "night-owl"
+        light: "rose-pine-moon",
+        dark: "rose-pine-moon",
       },
-      wrap: true
-    }
+      wrap: true,
+    },
   },
   vite: {
-    optimizeDeps: {}
+    optimizeDeps: {},
   },
-  scopedStyleStrategy: "where"
+  scopedStyleStrategy: "where",
 });

@@ -5,20 +5,20 @@
 @layer base {
   :root,
   html[data-theme="light"] {
-    --color-fill: 251, 254, 251;
-    --color-text-base: 40, 39, 40;
-    --color-accent: 0, 108, 172;
+    --color-fill: 250, 244, 237;
+    --color-text-base: 87, 82, 121;
+    --color-accent: 86, 148, 159;
     --color-card: 230, 230, 230;
-    --color-card-muted: 205, 205, 205;
-    --color-border: 236, 233, 233;
+    --color-card-muted: 152, 147, 165;
+    --color-border: 180, 99, 122;
   }
   html[data-theme="dark"] {
-    --color-fill: 59, 66, 82; /* nord dark bg */
-    --color-text-base: 236, 239, 244; /* nord light fg */
-    --color-accent: 208, 135, 112; /* nord orange */
-    --color-card: 46, 52, 64; /* nord darkest */
-    --color-card-muted: 76, 86, 106; /* nord least dark bg */
-    --color-border: 129, 161, 193; /* nord light blue */
+    --color-fill: 25, 23, 36; /* rose pine bg */
+    --color-text-base: 224, 222, 244; /* rose pine text */
+    --color-accent: 235, 188, 186; /* rose pine "rose" */
+    --color-card: 31, 29, 46; /* rose pine card */
+    --color-card-muted: 38, 35, 58; /* rose pine overlay */
+    --color-border: 49, 116, 143; /* rose pine pine */
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
@@ -128,7 +128,7 @@
   /* admonition styles */
   @layer components {
     .admonition {
-      @apply my-1 flex overflow-hidden rounded-md bg-[#2E3440] text-[#E5E9F0];
+      @apply my-1 flex overflow-hidden rounded-md bg-[#26233a] text-[#e0def4];
     }
 
     .admonition-label {
@@ -140,19 +140,19 @@
     }
 
     .admonition.note .admonition-label {
-      @apply bg-[#8FBCBB] text-[#E5E9F0];
+      @apply bg-[#ebbcba] text-[#e0def4];
     }
 
     .admonition.warning .admonition-label {
-      @apply bg-[#EBCB8B] text-[#2E3440];
+      @apply bg-[#f6c177] text-[#e0def4];
     }
 
     .admonition.danger .admonition-label {
-      @apply bg-[#BF616A] text-[#2E3440];
+      @apply bg-[#eb6f92] text-[#e0def4];
     }
 
     .admonition.tip .admonition-label {
-      @apply bg-[#A3BE8C] text-[#2E3440];
+      @apply bg-[#9ccfd8] text-[#191724];
     }
   }
 }
